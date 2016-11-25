@@ -28,6 +28,12 @@ class Album
     SqlRunner.run(sql)
   end
 
+  def artist()
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id};"
+    result = SqlRunner.run(sql)
+    artist = Artist.new(result[0])
+  end
+
   def self.update(options)
     sql = "UPDATE albums SET 
     title = '#{options['title']},
