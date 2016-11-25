@@ -19,6 +19,20 @@ artist1.save()
 artist2.save()
 artist3.save()
 
+album1 = Album.new({
+  'title'=>'Blackstar',
+  'artist_id'=>artist1.id,
+  'quantity'=>3
+  })
+
+album2 = Album.new({
+  'title'=>'The Works',
+  'artist_id'=>artist2.id,
+  'quantity'=>4
+  })
+
+album1.save()
+album2.save()
 
 
 binding.pry
