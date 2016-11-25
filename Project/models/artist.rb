@@ -18,6 +18,13 @@ class Artist
     @id = result[0]['id'].to_i
   end
 
+  def delete()
+    album = "SELECT * FROM albums WHERE artist_id = #{@id};"
+      return "Album linked - do not delete!" if album != nil
+    sql = "DELETE FROM artists WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM artists;"
     result = SqlRunner.run(sql)
