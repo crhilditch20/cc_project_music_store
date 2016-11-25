@@ -22,3 +22,4 @@ post '/albums' do
   album.save()
   redirect to("/albums")
 end
+
