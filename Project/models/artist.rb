@@ -1,4 +1,7 @@
 require('pg')
+require_relative('album')
+require_relative('../db/sql_runner.rb')
+require('pry-byebug')
 
 class Artist
 
@@ -13,14 +16,17 @@ class Artist
   def save()
     sql = "INSERT INTO artists
     (name) VALUES
-    ('#{@name}' RETURNING *;"
+    ('#{@name}') RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i
   end
 
   def delete()
-    album = "SELECT * FROM albums WHERE artist_id = #{@id};"
-      return "Album linked - do not delete!" if album != nil
+    # album_check = "SELECT * FROM albums WHERE artist_id = #{@id};"
+    # result = SqlRunner.run(album_check)
+    #   album = Album.new(result)
+    #     if album != nil then return "Album linked - do not delete!"
+    #   end
     sql = "DELETE FROM artists WHERE id = #{@id};"
     SqlRunner.run(sql)
   end

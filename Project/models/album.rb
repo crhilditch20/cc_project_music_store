@@ -1,4 +1,6 @@
 require('pg')
+require_relative('artist')
+require_relative('../db/sql_runner.rb')
 
 class Album
 
@@ -16,7 +18,7 @@ class Album
     sql = "INSERT INTO albums
     (title, artist_id, quantity)
     VALUES
-    ('#{@title}', #{@artist_id}, #{@quantity} RETURNING *;"
+    ('#{@title}', #{@artist_id}, #{@quantity}) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i
   end
