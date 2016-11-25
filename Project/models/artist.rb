@@ -22,13 +22,15 @@ class Artist
   end
 
   def delete()
-    # album_check = "SELECT * FROM albums WHERE artist_id = #{@id};"
-    # result = SqlRunner.run(album_check)
-    #   album = Album.new(result)
-    #     if album != nil then return "Album linked - do not delete!"
-    #   end
+    if albums.length > 0
+      return "Albums linked - don't delete!"
+    end
     sql = "DELETE FROM artists WHERE id = #{@id};"
     SqlRunner.run(sql)
+  end
+
+  def update()
+
   end
 
   def albums()
