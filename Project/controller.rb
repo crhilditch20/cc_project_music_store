@@ -23,4 +23,11 @@ post '/albums' do
   redirect to("/albums")
 end
 
+#serve form to edit album
+get '/albums/:id/edit' do
+  @album = Album.find(params[:id])
+  @artists = Artist.all()
+  erb(:edit)
+end
+
 

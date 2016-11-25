@@ -1,7 +1,13 @@
+<div style="padding:10px">
 <h1>Inventory</h1>
 
-<h4>The store has the following albums in stock. Order more when stock level displays 'Low'.  </h4>
+<p><h4>The store has the following albums in stock. </p>
+<p>Order more when stock level displays 'Low'. </p> </h4>
+<div>
 
+<p><a href='/albums/new'>Add new album</a></p>
+
+<div style="padding:10px">
 <table>
   <tr>
     <th>Title</th>
@@ -10,12 +16,13 @@
   </tr>
     <% for album in @albums%>
   <tr>
-    <td>  <%= album.title %></td>
+    <td>  <%= album.title %> <a href='/albums/<%= album.id %>/edit'>Edit</a></td>
     <td>  <%= album.artist.name %></td>
     <td class=number_column>  <%= album.quantity %></td>
   </tr>
     <%end%>
 </table>
+</div>
 
 
 
