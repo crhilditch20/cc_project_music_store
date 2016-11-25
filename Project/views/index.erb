@@ -1,0 +1,23 @@
+<h1>Inventory</h1>
+
+<h4>The store has the following albums in stock. Order more when stock level displays 'Low'.  </h4>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Quantity</th>
+  </tr>
+    <% for album in @albums%>
+  <tr>
+    <td>  <%= album.title %></td>
+    <td>  <%= album.artist.name %></td>
+    <td class=number_column>  <%= album.quantity %></td>
+  </tr>
+    <%end%>
+</table>
+
+
+
+
+

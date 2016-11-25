@@ -31,8 +31,22 @@ album2 = Album.new({
   'quantity'=>4
   })
 
+album3 = Album.new({
+  'title'=>'Be Yourself Tonight',
+  'artist_id'=>artist3.id,
+  'quantity'=>5
+  })
+
+album4 = Album.new({
+    'title'=>'Aladdin Sane',
+    'artist_id'=>artist1.id,
+    'quantity'=>4
+    })
+
 album1.save()
 album2.save()
+album3.save()
+album4.save()
 
 
 binding.pry
