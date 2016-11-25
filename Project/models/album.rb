@@ -21,4 +21,11 @@ class Album
     @id = result[0]['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM albums;"
+    result = SqlRunner.run(sql)
+    albums = result.map{ |album| Album.new(album)}
+    return albums
+  end
+
 end
