@@ -6,6 +6,7 @@
 <div>
 
 <p><a href='/albums/new'>Add new album</a></p>
+<p><a href='/artists/new'>Add new artist</a></p>
 
 <div style="padding:10px">
 <table>
@@ -20,7 +21,7 @@
     <td>  <%= album.title %> <a href='/albums/<%= album.id %>/edit'>Edit</a></td>
     <td>  <%= album.artist.name %></td>
     <td class=number_column>  <%= album.quantity %></td>
-    <td> <%= album.stock_check %> </td>
+    <td class=stock_level> <%= album.stock_check %> </td>
   </tr>
     <%end%>
 </table>
