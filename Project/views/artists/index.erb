@@ -4,16 +4,10 @@
 <p>Add a new album <a href='/albums/new'>here</a></p>
 
 <div style="padding:10px">
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
     <% for artist in @artists%>
-  <tr>
-    <td>  <%= artist.name %> 
-    <a href='artists/<%= artist.id %>'>View albums</a>
-    <a href='/artists/<%= artist.id %>/edit'>Edit</a> </td>
-  </tr>
+        <%= artist.name %> 
+        <a href='artists/<%= artist.id %>'>View albums</a>
+        <a href='/artists/<%= artist.id %>/edit'>Edit</a>
+      <hr/>
     <%end%>
-</table>
 </div>
