@@ -21,3 +21,15 @@ post '/artists' do
   artist.save()
   redirect to("/artists")
 end
+
+#serve form to edit artist
+get '/artists/:id/edit' do
+  @artist = Artist.find(params[:id])
+  erb(:"artists/edit")
+end
+
+#update artist in db
+post '/artists/:id' do
+  Artist.update(params)
+  redirect to("/artists")
+end
