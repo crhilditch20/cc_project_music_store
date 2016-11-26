@@ -28,13 +28,13 @@ album1 = Album.new({
 album2 = Album.new({
   'title'=>'The Works',
   'artist_id'=>artist2.id,
-  'quantity'=>4
+  'quantity'=>10
   })
 
 album3 = Album.new({
   'title'=>'Be Yourself Tonight',
   'artist_id'=>artist3.id,
-  'quantity'=>7
+  'quantity'=>5
   })
 
 album4 = Album.new({
