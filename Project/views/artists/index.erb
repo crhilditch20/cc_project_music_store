@@ -1,0 +1,16 @@
+<h1>Artists</h1>
+
+<p>Add a new artist here</p>
+
+<div style="padding:10px">
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+    <% for artist in @artists%>
+  <tr>
+    <td>  <%= artist.name %> </td>
+  </tr>
+    <%end%>
+</table>
+</div>
