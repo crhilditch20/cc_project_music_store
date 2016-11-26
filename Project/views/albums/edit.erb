@@ -13,8 +13,10 @@
         <label>
         Artist:
           <select name = "artist_id" >
-          <option> 
-          <%= @album.artist.name %></option>
+          <option
+          value="<%=@album.artist_id%>" > 
+          <%= @album.artist.name %>
+          </option>
               <%for artist in @artists%>
                <option value="<%=artist.id%>" > <%=artist.name%></option>
               <%end%>
