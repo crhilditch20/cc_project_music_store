@@ -30,4 +30,9 @@ get '/albums/:id/edit' do
   erb(:"albums/edit")
 end
 
+#update album in db
+post '/albums/:id' do
+  Album.update(params)
+  redirect to("/albums")
+end
 
