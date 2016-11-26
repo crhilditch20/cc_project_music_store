@@ -22,7 +22,7 @@ artist3.save()
 album1 = Album.new({
   'title'=>'Blackstar',
   'artist_id'=>artist1.id,
-  'quantity'=>3
+  'quantity'=>13
   })
 
 album2 = Album.new({
@@ -34,7 +34,7 @@ album2 = Album.new({
 album3 = Album.new({
   'title'=>'Be Yourself Tonight',
   'artist_id'=>artist3.id,
-  'quantity'=>5
+  'quantity'=>7
   })
 
 album4 = Album.new({

@@ -34,6 +34,17 @@ class Album
     artist = Artist.new(result[0])
   end
 
+  def stock_check()
+    if @quantity > 10
+        stock_level = "High"
+      elsif @quantity.between?(5,10)
+        stock_level = "Medium"
+      elsif @quantity < 5
+        stock_level = "Low"
+    end
+    return stock_level
+  end
+
   def self.update(options)
     sql = "UPDATE albums SET 
     title = '#{options['title']}',
