@@ -9,3 +9,8 @@ get '/artists' do
   @artists = Artist.all()
   erb(:"artists/index")
 end
+
+#serve up new artist form
+get '/artists/new' do
+  erb(:"artists/new")
+end
