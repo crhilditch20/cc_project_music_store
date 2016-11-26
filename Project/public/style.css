@@ -1,11 +1,11 @@
 body {
-  background-image: url('record.jpg');
-  color: white;
-  font-family: Arial;
+  background-color: AliceBlue;
+  color: MidnightBlue;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 table, th, td {
-  border: 1px solid white;
+  border: 1px solid MidnightBlue;
   border-collapse: collapse;
 
 }

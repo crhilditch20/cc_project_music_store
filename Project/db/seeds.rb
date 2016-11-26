@@ -40,7 +40,7 @@ album3 = Album.new({
 album4 = Album.new({
     'title'=>'Aladdin Sane',
     'artist_id'=>artist1.id,
-    'quantity'=>4
+    'quantity'=>0
     })
 
 album1.save()
