@@ -1,0 +1,24 @@
+<p><a href='/albums'>Back to inventory</a></p>
+
+<h1>Artist Info</h1>
+
+<p><h2> Artist: <%= @artist.name %> </h2> <a href='/artists/<%=@artist.id%>/edit'>Edit artist</a> </p>
+
+<p>Albums in stock </p>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Quantity</th>
+    <th>Stock Level</th>
+  </tr>
+    <% for album in @albums%>
+  <tr>
+    <td>  <%= album.title %> <a href='/albums/<%= album.id %>/edit'>Edit</a> </td>
+    <td class=number_column>  <%= album.quantity %></td>
+    <td> <%= album.stock_check %> </td>
+  </tr>
+    <%end%>
+</table>
+
+<p><a href='/albums/new'>Add new album</a></p>
+

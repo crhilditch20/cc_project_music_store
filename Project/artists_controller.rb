@@ -22,6 +22,13 @@ post '/artists' do
   redirect to("/artists")
 end
 
+#look at artist info
+get '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  @albums = @artist.albums()
+  erb(:"artists/show")
+end
+
 #serve form to edit artist
 get '/artists/:id/edit' do
   @artist = Artist.find(params[:id])
