@@ -27,6 +27,7 @@ class Artist
     end
     sql = "DELETE FROM artists WHERE id = #{@id};"
     SqlRunner.run(sql)
+    return "#{@name} deleted from database"
   end
 
   def self.update(options)
