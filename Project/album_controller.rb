@@ -3,6 +3,7 @@ require ('sinatra/contrib/all')
 require ('pry-byebug')
 require_relative('models/artist')
 require_relative('models/album')
+require_relative('models/genre')
 
 #show inventory page
 get '/albums' do
@@ -13,6 +14,7 @@ end
 #serve up new album form
 get '/albums/new' do
   @artists = Artist.all()
+  @genres = Genre.all()
   erb(:"albums/new")
 end
 
@@ -27,6 +29,7 @@ end
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
   @artists = Artist.all()
+  @genres = Genre.all()
   erb(:"albums/edit")
 end
 

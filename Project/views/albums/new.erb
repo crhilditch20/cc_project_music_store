@@ -24,6 +24,17 @@
 
     <p><a href='/artists/new'>Add a new artist</a></p>
 
+    <p>
+      <label>
+      Genre:
+        <select name = "genre_id" >
+          <option disabled selected >select...</option>
+            <%for genre in @genres%>
+              <option value="<%=genre.id%>" > <%=genre.name%></option>
+            <%end%>
+        </select>
+      </label>
+    </p>
   
       <p>
         <label>
