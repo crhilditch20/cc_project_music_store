@@ -17,5 +17,6 @@ CREATE TABLE albums (
   title TEXT NOT NULL,
   artist_id INT8 references artists(id) NOT NULL,
   quantity INT4,
-  genre_id INT8 references genres(id) NOT NULL
+  genre_id INT8 references genres(id) NOT NULL,
+  on_order INT4
 );

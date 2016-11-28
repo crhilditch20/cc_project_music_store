@@ -19,9 +19,9 @@ class Album
 
   def save()
     sql = "INSERT INTO albums
-    (title, artist_id, quantity, genre_id)
+    (title, artist_id, quantity, genre_id, on_order)
     VALUES
-    ('#{@title}', #{@artist_id}, #{@quantity}, #{@genre_id}) RETURNING *;"
+    ('#{@title}', #{@artist_id}, #{@quantity}, #{@genre_id}, #{@on_order}) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i
   end
@@ -50,8 +50,10 @@ class Album
         stock_level = "Medium"
       elsif @quantity.between?(1,4)
         stock_level = "Low"
-      elsif @quantity == 0
+      elsif @quantity == 0 && @on_order == 0
         stock_level = "Out of stock"
+      elsif @quantity == 0 && @on_order != 0
+        stock_level = "Awaiting delivery"
     end
     return stock_level
   end
@@ -61,7 +63,7 @@ class Album
     return "#{amount} on order"
   end
 
-  def order_delivery()
+  def receive_delivery()
     @quantity += @on_order
     @on_order = 0
     return "Order received"
