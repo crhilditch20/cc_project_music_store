@@ -1,10 +1,11 @@
 require('pg')
 require_relative('artist')
+require_relative('genre')
 require_relative('../db/sql_runner.rb')
 
 class Album
 
-  attr_accessor :title, :artist_id, :quantity
+  attr_accessor :title, :artist_id, :quantity, :genre_id
   attr_reader :id
 
   def initialize(options)
@@ -12,13 +13,14 @@ class Album
     @artist_id = options['artist_id'].to_i
     @quantity = options['quantity'].to_i
     @id = options['id'].to_i
+    @genre_id = options['genre_id'].to_i
   end
 
   def save()
     sql = "INSERT INTO albums
-    (title, artist_id, quantity)
+    (title, artist_id, quantity, genre_id)
     VALUES
-    ('#{@title}', #{@artist_id}, #{@quantity}) RETURNING *;"
+    ('#{@title}', #{@artist_id}, #{@quantity}, #{@genre_id}) RETURNING *;"
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i
   end
@@ -32,6 +34,12 @@ class Album
     sql = "SELECT * FROM artists WHERE id = #{@artist_id};"
     result = SqlRunner.run(sql)
     artist = Artist.new(result[0])
+  end
+
+  def genre()
+    sql = "SELECT * FROM genres WHERE id = #{@genre_id};"
+    result = SqlRunner.run(sql)
+    genre = Genre.new(result[0])
   end
 
   def stock_check()
@@ -51,7 +59,8 @@ class Album
     sql = "UPDATE albums SET 
     title = '#{options['title']}',
     artist_id = '#{options['artist_id']}',
-    quantity = '#{options['quantity']}'
+    quantity = '#{options['quantity']}',
+    genre_id = '#{options['genre_id']}'
     WHERE id = '#{options['id']}';"
     SqlRunner.run(sql)
   end
