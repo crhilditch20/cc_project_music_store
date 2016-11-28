@@ -1,6 +1,19 @@
-<h1>Add new album</h1>
+<h2>Add new album to inventory</h2>
 
-<h4>Add a new album to the inventory</h4>
+<h5>If artist does not exist, add here:</h5>
+
+<form action='/artists/new_album' method='post'>
+    <p>
+      <label>
+        Artist name:
+        <input type="text" name="name" />
+      </label>
+    </p>
+
+  <input type="submit" value="Save artist"/>
+</form>
+
+<p> Add album </p>
 
 <form action='/albums' method='post'>
       <p>
@@ -22,9 +35,9 @@
         </label>
       </p>
 
-      <label>
+     <!--  <label>
         <a href='/artists/new'>Or add a new artist</a>
-      </label>
+      </label> -->
 
     <p>
       <label>

@@ -16,11 +16,19 @@ get '/artists/new' do
   erb(:"artists/new")
 end
 
+
 #add new artist to db
 post '/artists' do
   artist = Artist.new(params)
   artist.save()
   redirect to("/artists")
+end
+
+#add new artist to db from new album form
+post '/artists/new_album' do
+  artist = Artist.new(params)
+  artist.save()
+  redirect to("/albums/new")
 end
 
 #look at artist info

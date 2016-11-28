@@ -1,7 +1,12 @@
 body {
-  background-color: LightBlue;
+  background: LightBlue;
   color: black;
   font-family: Tahoma, Geneva, sans-serif;
+}
+
+.image {
+  display: flex;
+  justify-content: flex-end;
 }
 
 table, th, td {
@@ -13,6 +18,7 @@ th, td {
   padding: 10px;
   text-align: left;
 }
+
 
 .number_column {
   text-align: right;
