@@ -6,12 +6,14 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Genre</th>
     <th>Quantity</th>
     <th>Stock Level</th>
   </tr>
     <% for album in @albums%>
   <tr>
-    <td>  <%= album.title %> <a href='/albums/<%= album.id %>/edit'>Edit</a> </td>
+    <td> <a href='/albums/<%= album.id %>/edit'> <%= album.title %> </a> </td>
+    <td> <%= album.genre.name %> </td>
     <td class=number_column>  <%= album.quantity %></td>
     <td> <%= album.stock_check %> </td>
   </tr>
