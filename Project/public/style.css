@@ -1,11 +1,12 @@
 body {
-  background-color: AliceBlue;
-  color: MidnightBlue;
-  font-family: Verdana, Geneva, sans-serif;
+  background-color: LightBlue;
+  background-size: 100%
+  color: black;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 table, th, td {
-  border: 1px solid MidnightBlue;
+  border: 1px solid black;
   border-collapse: collapse;
 
 }

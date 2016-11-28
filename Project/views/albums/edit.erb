@@ -13,12 +13,9 @@
         <label>
         Artist:
           <select name = "artist_id" >
-          <option
-          value="<%=@album.artist_id%>" > 
-          <%= @album.artist.name %>
-          </option>
               <%for artist in @artists%>
-                    <option value="<%=artist.id%>" > <%=artist.name%></option>
+                    <option <%= "selected" if artist.name == @album.artist.name %>
+                    value="<%=artist.id%>" > <%=artist.name%></option>
               <%end%>
           </select>
         </label>
