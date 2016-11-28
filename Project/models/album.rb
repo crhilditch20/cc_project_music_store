@@ -58,7 +58,13 @@ class Album
 
   def order(amount)
     @on_order += amount
-    return "#{amount} ordered"
+    return "#{amount} on order"
+  end
+
+  def order_delivery()
+    @quantity += @on_order
+    @on_order = 0
+    return "Order received"
   end
 
   def self.update(options)
