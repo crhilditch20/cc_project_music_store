@@ -12,17 +12,19 @@
 
       <p>
         <label>
-        Artist:
+        Choose artist:
           <select name = "artist_id" >
             <option disabled selected >select...</option>
               <%for artist in @artists%>
                 <option value="<%=artist.id%>" > <%=artist.name%></option>
-              <%end%>
+              <%end%> 
           </select>
         </label>
       </p>
 
-    <p><a href='/artists/new'>Add a new artist</a></p>
+      <label>
+        <a href='/artists/new'>Or add a new artist</a>
+      </label>
 
     <p>
       <label>

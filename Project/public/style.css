@@ -1,6 +1,5 @@
 body {
   background-color: LightBlue;
-  background-size: 100%
   color: black;
   font-family: Tahoma, Geneva, sans-serif;
 }
@@ -17,6 +16,10 @@ th, td {
 
 .number_column {
   text-align: right;
+}
+
+.menu_item {
+  padding-right: 20px;
 }
 
 
