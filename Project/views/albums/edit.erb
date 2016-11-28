@@ -23,6 +23,18 @@
 
       <p>
         <label>
+        Genre:
+          <select name = "genre_id" >
+              <%for genre in @genres%>
+                <option <%= "selected" if genre.name == @album.genre.name %>
+                value="<%=genre.id%>" > <%=genre.name%></option>
+              <%end%>
+          </select>
+        </label>
+      </p>
+
+      <p>
+        <label>
         Quantity:
           <input type="number" name="quantity"
           value="<%= @album.quantity %>" />
