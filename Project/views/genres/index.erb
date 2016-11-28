@@ -1,8 +1,10 @@
 <h1>Genres</h1>
 
-<div>
+
 <% for genre in @genres%>
-        <%= genre.name %> 
+        <%= genre.name %>
+        <% for album in genre.albums %>
+          <%= album.title %>
+        <%end%>
       <hr/>
     <%end%>
-</div>
