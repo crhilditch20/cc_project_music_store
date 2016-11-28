@@ -20,11 +20,20 @@ class Genre
     @id = result[0]['id'].to_i
   end
 
+  def albums()
+    sql = "SELECT * FROM albums WHERE genre_id = #{@id};"
+    result = SqlRunner.run(sql)
+    albums = result.map {|album| Album.new(album)}
+    return albums
+  end
+
   def self.all()
     sql = "SELECT * FROM genres;"
     result = SqlRunner.run(sql)
     genres = result.map{ |genre| Genre.new(genre)}
     return genres
   end
+
+
 
 end
