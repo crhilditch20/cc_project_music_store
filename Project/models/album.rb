@@ -5,7 +5,7 @@ require_relative('../db/sql_runner.rb')
 
 class Album
 
-  attr_accessor :title, :artist_id, :quantity, :genre_id
+  attr_accessor :title, :artist_id, :quantity, :genre_id, :on_order
   attr_reader :id
 
   def initialize(options)
@@ -14,6 +14,7 @@ class Album
     @quantity = options['quantity'].to_i
     @id = options['id'].to_i
     @genre_id = options['genre_id'].to_i
+    @on_order = options['on_order'].to_i
   end
 
   def save()
@@ -53,6 +54,11 @@ class Album
         stock_level = "Out of stock"
     end
     return stock_level
+  end
+
+  def order(amount)
+    @on_order += amount
+    return "#{amount} ordered"
   end
 
   def self.update(options)
