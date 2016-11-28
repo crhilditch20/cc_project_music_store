@@ -1,8 +1,5 @@
-<p><a href='/albums'>Back to inventory</a></p>
-
 <p><h2> Artist: <%= @artist.name %> </h2> 
-
-<a href='/artists/<%=@artist.id%>/edit'>Edit artist</a> </p>
+<a class="btn" href='/artists/<%=@artist.id%>/edit'>Edit artist</a> </p>
 
 <p>Albums in stock </p>
 <table>
@@ -22,5 +19,5 @@
     <%end%>
 </table>
 
-<p><a href='/albums/new'>Add new album</a></p>
+<p><a class="btn" href='/albums/new'>Add new album</a></p>
 

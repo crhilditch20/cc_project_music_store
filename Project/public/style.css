@@ -19,13 +19,21 @@ th, td {
   text-align: left;
 }
 
-
 .number_column {
   text-align: right;
 }
 
 .menu_item {
   padding-right: 20px;
+}
+
+.btn {
+  border: 1px solid black;
+  background-color: CadetBlue;
+  color: white;
+  padding: 4px;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
 

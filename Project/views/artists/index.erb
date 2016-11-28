@@ -1,7 +1,7 @@
 <h1>Artists</h1>
 
-<div style="padding:10px">
-    <% for artist in @artists%>
+<div>
+<% for artist in @artists%>
         <%= artist.name %> 
         <a href='artists/<%= artist.id %>'>View albums</a>
         <a href='/artists/<%= artist.id %>/edit'>Edit</a>
