@@ -68,6 +68,7 @@ class Album
   def receive_delivery()
     @quantity += @on_order
     @on_order = 0
+    sql = "UPDATE albums SET (quantity, on_order) = (#{@quantity}, #{@on_order}) WHERE id = #{@id};"
     return "Order received"
   end
 
