@@ -42,5 +42,7 @@ th, td {
   font-size: x-small;
 }
 
-
+.centre {
+  text-align: center;
+}
 

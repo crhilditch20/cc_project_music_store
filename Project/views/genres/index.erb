@@ -1,10 +1,16 @@
 <h1>Genres</h1>
 
+<p><a class='btn' href='/genres/new'>Add new genre</a></p>
+
 
 <% for genre in @genres%>
-        <%= genre.name %>
-        <% for album in genre.albums %>
+        <%= genre.name %> 
+
+ <% for album in genre.albums %>
           <%= album.title %>
         <%end%>
-      <hr/>
-    <%end%>
+    <%end%> 
+
+
+
+
