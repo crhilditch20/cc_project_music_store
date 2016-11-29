@@ -69,6 +69,7 @@ class Album
     @quantity += @on_order
     @on_order = 0
     sql = "UPDATE albums SET (quantity, on_order) = (#{@quantity}, #{@on_order}) WHERE id = #{@id};"
+    SqlRunner.run(sql)
     return "Order received"
   end
 

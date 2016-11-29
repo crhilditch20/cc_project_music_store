@@ -10,6 +10,7 @@
     <th>Quantity</th>
     <th>Stock Level</th>
     <th>Order more</th>
+    <th>Receive order</th>
   </tr>
     <% for album in @albums%>
   <tr>
@@ -19,6 +20,7 @@
     <td class=number_column>  <%= album.quantity %></td>
     <td> <%= album.stock_check %> </td>
     <td> <a class="btn" href='/albums/<%= album.id %>/order'>Order</a></td>
+    <td> <a class="btn" href='/albums/<%= album.id %>/delivery'>Receive</a></td>
   </tr>
     <%end%>
 </table>

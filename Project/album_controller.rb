@@ -52,5 +52,18 @@ post '/albums/:id/order_conf' do
   redirect to("/albums")
 end
 
+#receive delivery
+get '/albums/:id/delivery' do
+  @album = Album.find(params[:id])
+  erb(:"albums/delivery")
+end
+
+#confirm delivery
+post '/albums/:id/delivery_conf' do
+  @album = Album.find(params[:id])
+  @album.receive_delivery
+  redirect to("/albums")
+end
+
 
 
