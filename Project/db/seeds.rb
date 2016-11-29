@@ -74,6 +74,8 @@ album2.save()
 album3.save()
 album4.save()
 
+album4.order(5)
+
 
 binding.pry
 nil

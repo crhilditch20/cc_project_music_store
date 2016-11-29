@@ -3,8 +3,8 @@
 <div>
 <% for artist in @artists%>
         <%= artist.name %> 
-        <a href='artists/<%= artist.id %>'>View albums</a>
-        <a href='/artists/<%= artist.id %>/edit'>Edit</a>
+        <a class="small" href='artists/<%= artist.id %>'>View albums</a>
+        <a class="small" href='/artists/<%= artist.id %>/edit'>Edit</a>
       <hr/>
     <%end%>
 </div>

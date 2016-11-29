@@ -1,6 +1,7 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('album')
+require('pry-byebug')
 
 
 class TestAlbum< Minitest::Test
@@ -15,6 +16,8 @@ class TestAlbum< Minitest::Test
     result = album.order(10)
     assert_equal("10 on order", result)
   end
+
+
 
   def test_receive_delivery
     album = Album.new({
@@ -33,10 +36,10 @@ class TestAlbum< Minitest::Test
     album = Album.new({
       'title'=>'Blackstar',
       'artist_id'=>1,
-      'quantity'=>0,
+      'quantity'=>4,
       'genre_id'=>1,
-      'on_order'=>10
       })
+    album.order(10)
     result = album.stock_check
     assert_equal("Awaiting delivery", result)
   end

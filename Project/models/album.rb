@@ -44,22 +44,24 @@ class Album
   end
 
   def stock_check()
-    if @quantity > 10
-        stock_level = "High"
-      elsif @quantity.between?(5,10)
-        stock_level = "Medium"
-      elsif @quantity.between?(1,4)
-        stock_level = "Low"
-      elsif @quantity == 0 && @on_order == 0
-        stock_level = "Out of stock"
-      elsif @quantity == 0 && @on_order != 0
+      if @on_order != 0
         stock_level = "Awaiting delivery"
+      elsif @quantity > 10 
+        stock_level = "High"
+      elsif @quantity.between?(5,10) 
+        stock_level = "Medium"
+      elsif @quantity.between?(1,4) 
+        stock_level = "Low"
+      elsif @quantity == 0 
+        stock_level = "Out of stock"
     end
     return stock_level
   end
 
   def order(amount)
     @on_order += amount
+    sql = "UPDATE albums SET on_order = #{@on_order} WHERE id = #{@id};"
+    SqlRunner.run(sql)
     return "#{amount} on order"
   end
 

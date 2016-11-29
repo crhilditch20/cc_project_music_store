@@ -39,3 +39,18 @@ post '/albums/:id' do
   redirect to("/albums")
 end
 
+#stock order form
+get '/albums/:id/order' do
+  @album = Album.find(params[:id])
+  erb(:"albums/order")
+end
+
+#place order
+post '/albums/order_conf' do
+  @album = Album.find(params[:id])
+  @album.order(params)
+  redirect to("/albums")
+end
+
+
+
