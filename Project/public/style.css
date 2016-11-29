@@ -46,3 +46,35 @@ th, td {
   text-align: center;
 }
 
+.title {
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+#genres ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  min-width: 100px;
+}
+
+
+#genres li, p {
+  padding: 5px;
+}

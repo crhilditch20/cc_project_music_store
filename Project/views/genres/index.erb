@@ -2,14 +2,26 @@
 
 <p><a class='btn' href='/genres/new'>Add new genre</a></p>
 
+<div id="genres" class="flex flex--row flex--wrap">
 
-<% for genre in @genres%>
-        <%= genre.name %> 
+<% for genre in @genres %>
+  <div class="flex flex--column">
+    <p><%= genre.name %></p>
+    <ul>
+    <% for album in genre.albums %>
+      <li><%= album.title %></li>
+    <%end%>
+    </ul>
+  </div>
+<%end%>
 
- <% for album in genre.albums %>
-          <%= album.title %>
-        <%end%>
-    <%end%> 
+</div>
+
+
+
+
+
+
 
 
 
