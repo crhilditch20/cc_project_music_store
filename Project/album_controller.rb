@@ -46,9 +46,9 @@ get '/albums/:id/order' do
 end
 
 #place order
-post '/albums/order_conf' do
+post '/albums/:id/order_conf' do
   @album = Album.find(params[:id])
-  @album.order(params)
+  @album.order(params[:on_order].to_i)
   redirect to("/albums")
 end
 

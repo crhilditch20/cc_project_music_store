@@ -14,7 +14,7 @@ class Album
     @quantity = options['quantity'].to_i
     @id = options['id'].to_i
     @genre_id = options['genre_id'].to_i
-    @on_order = on_order.to_i
+    @on_order = options['on_order'].to_i
   end
 
   def save()

@@ -5,7 +5,7 @@
 <p>Quantity: <%= @album.quantity %></p>
 
 
-  <form action="'/albums/<% @album.id %>" method="post">
+  <form action="/albums/<%=@album.id %>/order_conf" method="post">
     <label>
         Amount to order:
           <input type="number" name="on_order"/>
