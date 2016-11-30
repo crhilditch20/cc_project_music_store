@@ -1,4 +1,4 @@
-<p><h1>Genres</h1></p>
+<p><h1>Genres (number of albums)</h1></p>
 
 <p><a class='btn' href='/genres/new'>Add new genre</a></p>
 
@@ -6,11 +6,11 @@
 
 <% for genre in @genres %>
   <div class="flex flex--column">
-    <p><%= genre.name %></p>
+    <p><%= genre.name %> (<%= genre.albums.count %>)</p>
+    <hr/>
     <ul>
     <% for album in genre.albums %>
       <li><%= album.title %></li>
-      <hr/>
     <%end%>
     </ul>
   </div>

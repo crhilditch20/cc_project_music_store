@@ -81,6 +81,7 @@ th, td {
 
 .flex--column {
   flex-direction: column;
+  border-left: 1px solid black;
 }
 
 #genres ul {
