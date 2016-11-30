@@ -7,6 +7,8 @@ body {
 .image {
   display: flex;
   justify-content: flex-end;
+  padding: none;
+  margin: 0px;
 }
 
 table {
@@ -32,6 +34,10 @@ th, td {
 
 .number_column {
   text-align: right;
+}
+
+.button {
+  text-align: center;
 }
 
 .menu_item {

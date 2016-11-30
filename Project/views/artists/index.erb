@@ -1,8 +1,8 @@
 <h1>Artists</h1>
 
-<div class="flex flex--column">
+<div>
 <% for artist in @artists%>
-        <%= artist.name %> 
+        <p><%= artist.name %> </p>
         <a class="small" href='artists/<%= artist.id %>'>View albums in stock</a>
         <a class="small" href='/artists/<%= artist.id %>/edit'>Edit artist</a>
       <hr/>

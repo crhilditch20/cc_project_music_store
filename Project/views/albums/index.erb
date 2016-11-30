@@ -1,5 +1,4 @@
 <h1 class="centre">Inventory</h1>
-
 <p><h4 class="centre">The store has the following albums in stock. Order more when stock level displays 'Low' </p> </h4>
 
 <table>
@@ -19,8 +18,8 @@
     <td nowrap> <%= album.genre.name %></td>
     <td nowrap class=number_column>  <%= album.quantity %></td>
     <td nowrap> <%= album.stock_check %> </td>
-    <td nowrap> <a class="btn" href='/albums/<%= album.id %>/order'>Order</a></td>
-    <td nowrap> <a class="btn" href='/albums/<%= album.id %>/delivery'>Receive</a></td>
+    <td nowrap class="button"> <a class="btn" href='/albums/<%= album.id %>/order'>Order</a></td>
+    <td nowrap class="button"> <a class="btn" href='/albums/<%= album.id %>/delivery'>Receive</a></td>
   </tr>
     <%end%>
 </table>

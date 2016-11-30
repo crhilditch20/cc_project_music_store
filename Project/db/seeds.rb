@@ -7,15 +7,12 @@ require_relative('../models/genre')
 artist1 = Artist.new({
   'name'=>'David Bowie'
   })
-
 artist2 = Artist.new({
   'name'=>'Queen'
   })
-
 artist3 = Artist.new({
   'name'=>'Eurythmics'
   })
-
 artist4 = Artist.new({
   'name'=> 'Michael Jackson'
   })
@@ -28,15 +25,12 @@ artist4.save()
 genre1 = Genre.new({
   'name'=>'Rock'
   })
-
 genre2 = Genre.new({
   'name'=>'Pop'
   })
-
 genre3 = Genre.new({
   'name'=>'Alternative'
   })
-
 genre4 = Genre.new({
   'name'=>'Electronica'
   })
@@ -52,28 +46,24 @@ album1 = Album.new({
   'quantity'=>13,
   'genre_id'=>genre1.id
   })
-
 album2 = Album.new({
   'title'=>'Greatest Hits',
   'artist_id'=>artist2.id,
   'quantity'=>10,
   'genre_id'=>genre1.id
   })
-
 album3 = Album.new({
   'title'=>'Be Yourself Tonight',
   'artist_id'=>artist3.id,
   'quantity'=>5,
   'genre_id'=>genre3.id
   })
-
 album4 = Album.new({
     'title'=>'Aladdin Sane',
     'artist_id'=>artist1.id,
     'quantity'=>0,
     'genre_id'=>genre1.id
     })
-
 album5 = Album.new({
     'title'=>'Thriller',
     'artist_id'=>artist4.id,
