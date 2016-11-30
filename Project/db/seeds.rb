@@ -16,24 +16,29 @@ artist3 = Artist.new({
   'name'=>'Eurythmics'
   })
 
+artist4 = Artist.new({
+  'name'=> 'Michael Jackson'
+  })
+
 artist1.save()
 artist2.save()
 artist3.save()
+artist4.save()
 
 genre1 = Genre.new({
-  'name'=>'rock'
+  'name'=>'Rock'
   })
 
 genre2 = Genre.new({
-  'name'=>'pop'
+  'name'=>'Pop'
   })
 
 genre3 = Genre.new({
-  'name'=>'alternative'
+  'name'=>'Alternative'
   })
 
 genre4 = Genre.new({
-  'name'=>'electronica'
+  'name'=>'Electronica'
   })
 
 genre1.save()
@@ -49,7 +54,7 @@ album1 = Album.new({
   })
 
 album2 = Album.new({
-  'title'=>'The Works',
+  'title'=>'Greatest Hits',
   'artist_id'=>artist2.id,
   'quantity'=>10,
   'genre_id'=>genre1.id
@@ -69,10 +74,19 @@ album4 = Album.new({
     'genre_id'=>genre1.id
     })
 
+album5 = Album.new({
+    'title'=>'Thriller',
+    'artist_id'=>artist4.id,
+    'quantity'=>12,
+    'genre_id'=>genre2.id
+    })
+
+
 album1.save()
 album2.save()
 album3.save()
 album4.save()
+album5.save()
 
 # album4.order(5)
 

@@ -6,7 +6,7 @@
 
 <% for genre in @genres %>
   <div class="flex flex--column">
-    <p><%= genre.name %></p>
+    <p class="title"><%= genre.name %></p>
     <ul>
     <% for album in genre.albums %>
       <li><%= album.title %></li>
