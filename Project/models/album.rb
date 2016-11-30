@@ -35,16 +35,18 @@ class Album
     sql = "SELECT * FROM artists WHERE id = #{@artist_id};"
     result = SqlRunner.run(sql)
     artist = Artist.new(result[0])
+    return artist
   end
 
   def genre()
     sql = "SELECT * FROM genres WHERE id = #{@genre_id};"
     result = SqlRunner.run(sql)
     genre = Genre.new(result[0])
+    return genre
   end
 
   def stock_check()
-      if @on_order != 0
+    if @on_order != 0
         stock_level = "Awaiting delivery"
       elsif @quantity > 10 
         stock_level = "High"
