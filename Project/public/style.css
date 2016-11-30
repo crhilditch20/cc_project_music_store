@@ -59,6 +59,18 @@ th, td {
   background-color: OrangeRed;
 }
 
+.form_separator1 {
+  border: 1px solid black; 
+  width: 45%;
+  padding: 10px;
+}
+
+.form_separator2 {
+  border: 1px solid black; 
+  width: 55%;
+  padding: 10px;
+}
+
 .small {
   font-size: small;
 }

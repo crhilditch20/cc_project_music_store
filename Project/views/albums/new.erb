@@ -1,60 +1,79 @@
-<h2>Add new album to inventory</h2>
+<h2 class="centre">Add new album to inventory</h2>
 
-<h5>If artist does not exist, add here:</h5>
+<div class="flex">
 
-<form action='/artists/new_album' method='post'>
-    <p>
-      <label>
-        Artist name:
-        <input type="text" name="name" />
-      </label>
-    </p>
-
-  <input class="btn" type="submit" value="Save artist"/>
-</form>
-
-
-<h5>Add album</h5>
-<form action='/albums' method='post'>
+  <div class="form_separator2">
+    <h3>Add album</h3>
+    <form action='/albums' method='post'>
       <p>
         <label>
-        Title:
+          Title:
           <input type="text" name="title" />
         </label>
       </p>
 
       <p>
         <label>
-        Choose artist:
+          Choose artist:
           <select name = "artist_id" >
             <option disabled selected >select...</option>
-              <%for artist in @artists%>
-                <option value="<%=artist.id%>" > <%=artist.name%></option>
-              <%end%> 
+            <%for artist in @artists%>
+            <option value="<%=artist.id%>" > <%=artist.name%></option>
+            <%end%> 
           </select>
         </label>
       </p>
 
-    <p>
-      <label>
-      Genre:
-        <select name = "genre_id" >
-          <option disabled selected >select...</option>
-            <%for genre in @genres%>
-              <option value="<%=genre.id%>" > <%=genre.name%></option>
-            <%end%>
-        </select>
-      </label>
-    </p>
-  
       <p>
         <label>
-        Quantity:
+          Genre:
+          <select name = "genre_id" >
+            <option disabled selected >select...</option>
+            <%for genre in @genres%>
+            <option value="<%=genre.id%>" > <%=genre.name%></option>
+            <%end%>
+          </select>
+        </label>
+      </p>
+      
+      <p>
+        <label>
+          Quantity:
           <input type="number" min="0" name="quantity" />
         </label>
       </p>
 
-    <input class="btn" type="submit" value="Save album"/>
+      <input class="btn" type="submit" value="Save album"/>
 
-</form>
+    </form>
+  </div>
 
+  <div class="form_separator1">
+    <h4>If artist does not exist, add here:</h4>
+
+    <form action='/artists/new_album' method='post'>
+      <p>
+        <label>
+          Artist name:
+          <input type="text" name="name" />
+        </label>
+      </p>
+
+      <input class="btn" type="submit" value="Save artist"/>
+    </form>
+
+    <h4>If genre does not exist, add here:</h4>
+
+    <form action='/genres/new_album' method='post'>
+      <p>
+        <label>
+          Genre:
+          <input type="text" name="name" />
+        </label>
+      </p>
+
+      <input class="btn" type="submit" value="Save genre"/>
+    </form>
+
+  </div>
+</div>

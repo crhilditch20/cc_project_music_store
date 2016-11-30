@@ -19,3 +19,9 @@ post '/genres' do
   genre.save()
   redirect to("/genres")
 end
+
+post '/genres/new_album' do
+  genre = Genre.new(params)
+  genre.save()
+  redirect to("/albums/new")
+end
