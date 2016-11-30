@@ -1,7 +1,7 @@
 body {
   background: LightGrey;
   color: black;
-  font-family: Futura;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
 }
 
 .image {
@@ -12,7 +12,10 @@ body {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  margin: auto;
+  width: 70%;
 }
+
 
 th, td {
   padding: 10px;
@@ -44,11 +47,6 @@ th, td {
 
 .centre {
   text-align: center;
-}
-
-.title {
-  font-size: large;
-  text-decoration-line: underline;
 }
 
 .flex {
