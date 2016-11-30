@@ -9,7 +9,7 @@
     <p><%= genre.name %> (<%= genre.albums.count %>)</p>
     <ul>
     <% for album in genre.albums %>
-      <li><%= album.title %></li>
+      <li> <a href='/albums/<%=album.id%>/edit'><%= album.title %></a></li>
     <%end%>
     </ul>
   </div>
