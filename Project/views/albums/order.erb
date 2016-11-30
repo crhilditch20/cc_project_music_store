@@ -2,7 +2,7 @@
 
 <p>Album title: <%= @album.title %></p>
 <p>Artist: <%= @album.artist.name %></p>
-<p>Quantity: <%= @album.quantity %></p>
+<p>Stock remaining: <%= @album.quantity %></p>
 
 
   <form action="/albums/<%=@album.id %>/order_conf" method="post">

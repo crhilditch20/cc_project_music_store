@@ -1,5 +1,5 @@
 body {
-  background: LightGrey;
+  background: AliceBlue;
   color: black;
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
 }
@@ -92,5 +92,5 @@ th, td {
 
 
 #genres li, p {
-  padding: 5px;
+  padding: 7px;
 }
