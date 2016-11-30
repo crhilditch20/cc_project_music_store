@@ -12,17 +12,17 @@ body {
 }
 
 table {
-    margin: auto;
-    width: 90%;
+  margin: auto;
+  width: 90%;
 }
 
 .artists {
-  margin:auto;
+  margin: auto;
   width: 70%;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid grey;
   border-collapse: collapse;
 }
 
@@ -30,6 +30,11 @@ table, th, td {
 th, td {
   padding: 10px;
   text-align: left;
+}
+
+th {
+  background-color: black;
+  color: AliceBlue;
 }
 
 .number_column {
