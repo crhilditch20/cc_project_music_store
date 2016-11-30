@@ -53,7 +53,7 @@ class Album
       elsif @quantity.between?(1,4) 
         stock_level = "Low"
       elsif @quantity == 0 
-        stock_level = "Out of stock"
+        stock_level = "Out of stock!"
     end
     return stock_level
   end
